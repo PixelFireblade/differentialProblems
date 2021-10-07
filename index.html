@@ -12,7 +12,7 @@
     <script>
         var elt = document.getElementById('calculator');
         var calculator = Desmos.GraphingCalculator(elt);
-        calculator.updateSettings({expressions: false});
+        calculator.updateSettings({expressions: false, lockViewport: true});
         function graphEquation(equation, width, height, period, length) {
             calculator.setMathBounds({left: - width / 2 - 5, right: width / 2 + 5, bottom: - height / 2 - 5, top: height / 2 + 5});
             calculator.setExpression({latex: 'g\\left(x,y\\right)=' + equation});
